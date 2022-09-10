@@ -19,3 +19,7 @@ code {
 a {
   @apply text-blue-400 underline;
 }
+
+p {
+  @apply text-gray-200;
+}
