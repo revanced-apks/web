@@ -102,7 +102,7 @@ const App = () => {
               .
             </p>
             <p className="pt-2 text-sm">
-              This project is open source and you can contribute on{" "}
+              This project is open source, forked from <a href="https://github.com/j-hc/revanced-magisk-module">j-hc/revanced-magisk-module</a>, check our source at{" "}
               <a
                 className="text-gray-300"
                 href="https://github.com/revanced-apks"
