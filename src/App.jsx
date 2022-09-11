@@ -110,6 +110,7 @@ const App = () => {
                 GitHub
               </a>
             </p>
+            <p>Join our <a href="https://t.me/revanced_apks_web">Telegram</a> for release updates.</p>
           </div>
         </div>
     </div>
