@@ -9,7 +9,7 @@ const App = () => {
   const [response, setResponse] = React.useState({});
   React.useEffect(() => {
     fetch(
-      "https://raw.githubusercontent.com/revanced-apks/revanced-apks/release/release.json"
+      "https://raw.githubusercontent.com/revanced-apks/build-apps/release/release.json"
     )
       .then((res) => res.json())
       .then((json) => {
