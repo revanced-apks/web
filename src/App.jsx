@@ -57,6 +57,7 @@ const App = () => {
               </a>{" "}
               to login on youtube and music.
             </p>
+            <p className="text-gray-300 max-w-lg text-xs">If you are having problems with latest version of release, download previous releases from our <a href="https://t.me/revanced_apks_web">Telegram channel</a> or <a href="https://github.com/revanced-apks/build-apps/releases">GitHub releases</a>.</p>
           </div>
           <div className="pt-5 md:pt-0 space-y-2 md:pl-5">
             <h1 className="text-2xl text-gray-200 font-extrabold underline">
