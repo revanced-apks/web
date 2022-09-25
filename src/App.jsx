@@ -50,13 +50,6 @@ const App = () => {
                 <p className="text-gray-300 font-bold">Loading...</p>
               )}
             </div>
-            <p className="text-gray-300">
-              Use{" "}
-              <a href="https://www.apkmirror.com/apk/team-vanced/microg-youtube-vanced/">
-                microg
-              </a>{" "}
-              to login on youtube and music.
-            </p>
             <p className="text-gray-300 max-w-lg text-xs">If you are having problems with latest version of release, download previous releases from our <a href="https://t.me/revanced_apks_web">Telegram channel</a> or <a href="https://github.com/revanced-apks/build-apps/releases">GitHub releases</a>.</p>
           </div>
           <div className="pt-5 md:pt-0 space-y-2 md:pl-5">
