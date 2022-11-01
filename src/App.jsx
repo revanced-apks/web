@@ -42,7 +42,7 @@ const App = () => {
                   className="text-gray-300 marked font-bold max-w-xl text-xs md:text-base"
                   dangerouslySetInnerHTML={{
                     __html: marked.parse(
-                      response.body.slice(13).replaceAll("\n", "<br />")
+                      response.body
                     ),
                   }}
                 ></p>
