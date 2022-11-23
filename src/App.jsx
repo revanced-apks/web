@@ -7,7 +7,7 @@ import main_icon from "./main_icon.png";
 
 const App = () => {
   const [response, setResponse] = React.useState({});
-  const [release, setRelease] = React.useState({});
+  const [release, setRelease] = React.useState("");
   React.useEffect(() => {
     fetch(
       "https://api.github.com/repos/revanced-apks/build-apps/releases/latest"
@@ -19,7 +19,8 @@ const App = () => {
     fetch(
       "https://raw.githubusercontent.com/revanced-apks/build-apps/update/release_notification.md"
     )
-      .then((res) => setRelease(res.text()));
+      .then((res) => res.text())
+      .then((text) => setRelease(text));
   }, []);
   return (
     <div className="App flex flex-col items-center justify-center">
@@ -43,14 +44,14 @@ const App = () => {
             </h2>
             <div className="border p-4 rounded-3xl bg-gray-900 border-gray-400 shadow-md shadow-sky-500">
               {response.body ? (
-                <p
-                  className="text-gray-300 marked font-bold max-w-xl text-xs md:text-base"
+                <pre
+                  className="text-gray-300 marked font-bold font-sans text-start whitespace-pre-wrap max-w-xl text-xs md:text-base"
                   dangerouslySetInnerHTML={{
-                    __html: marked.parse(
-                      release.replaceAll("\n", "<br /> ")
+                    __html: marked.parseInline(
+                      release
                     ),
                   }}
-                ></p>
+                ></pre>
               ) : (
                 <p className="text-gray-300 font-bold">Loading...</p>
               )}
