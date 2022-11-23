@@ -19,7 +19,7 @@ const App = () => {
     fetch(
       "https://raw.githubusercontent.com/revanced-apks/build-apps/update/release_notification.md"
     )
-      .then((res) => setRelease(res.body));
+      .then((res) => setRelease(res.text()));
   }, []);
   return (
     <div className="App flex flex-col items-center justify-center">
