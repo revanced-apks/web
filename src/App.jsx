@@ -7,6 +7,7 @@ import main_icon from "./main_icon.png";
 
 const App = () => {
   const [response, setResponse] = React.useState({});
+  const [release, setRelease] = React.useState({});
   React.useEffect(() => {
     fetch(
       "https://api.github.com/repos/revanced-apks/build-apps/releases/latest"
@@ -15,6 +16,10 @@ const App = () => {
       .then((json) => {
         setResponse(json);
       });
+    fetch(
+      "https://raw.githubusercontent.com/revanced-apks/build-apps/update/release_notification.md"
+    )
+      .then((res) => setRelease(res));
   }, []);
   return (
     <div className="App flex flex-col items-center justify-center">
@@ -42,7 +47,7 @@ const App = () => {
                   className="text-gray-300 marked font-bold max-w-xl text-xs md:text-base"
                   dangerouslySetInnerHTML={{
                     __html: marked.parse(
-                      response.body.replaceAll("\n", "<br /> ")
+                      release.replaceAll("\n", "<br /> ")
                     ),
                   }}
                 ></p>
