@@ -1,6 +1,10 @@
 import React from "react";
 
-const Download = (props) => {
+type DownloadIconProps = {
+  style: string;
+};
+
+const Download: React.FC<DownloadIconProps> = (props) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
